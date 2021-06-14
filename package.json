@@ -1,0 +1,25 @@
+{
+  "name": "16-puzzle",
+  "version": "1.0.0",
+  "description": "16-puzzle",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mye0ngs00/16-puzzle.git"
+  },
+  "scripts": {
+    "build": "babel src/js -w -d dist/js"
+  },
+  "keywords": [],
+  "author": "ourendpoint@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mye0ngs00/16-puzzle/issues"
+  },
+  "homepage": "https://github.com/mye0ngs00/16-puzzle#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5"
+  }
+}
