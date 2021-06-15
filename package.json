@@ -8,7 +8,8 @@
     "url": "git+https://github.com/mye0ngs00/16-puzzle.git"
   },
   "scripts": {
-    "build": "babel src/js -w -d dist/js"
+    "start": "webpack --mode development --open --hot",
+    "build": "webpack -w"
   },
   "keywords": [],
   "author": "ourendpoint@gmail.com",
@@ -20,6 +21,13 @@
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.5",
-    "@babel/preset-env": "^7.14.5"
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
   }
 }
