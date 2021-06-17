@@ -1,5 +1,6 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: ['@babel/polyfill', './src/js/index.js'],
@@ -8,9 +9,8 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html',
-    }),
+    new HtmlWebpackPlugin({ template: './index.html' }),
+    new MiniCssExtractPlugin({ filename: 'app.css' }),
   ],
   devServer: {
     contentBase: __dirname + "dist/js/",
@@ -34,8 +34,15 @@ module.exports = {
             presets: ['@babel/preset-env'],
             plugins: ['@babel/plugin-proposal-class-properties']
           }
-        }
-      }
+        },
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
+      },
     ]
   },
   devtool: 'source-map',

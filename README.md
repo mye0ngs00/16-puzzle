@@ -21,5 +21,6 @@ References:
 - https://poiemaweb.com/es6-babel-webpack-2
 - https://stackoverflow.com/questions/64635369/react-js-and-webpack-throwing-error-cannot-find-module-webpack-cli-bin-config
 - https://webpack.js.org/plugins/html-webpack-plugin/
+- https://www.npmjs.com/package/mini-css-extract-plugin
 
 ![mye0ngs00](https://user-images.githubusercontent.com/59429060/121784685-4bd87a80-cbf0-11eb-947f-ba74642f70e7.png)
