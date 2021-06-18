@@ -1,16 +1,20 @@
 body { margin: 0px; }
+div.wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  margin-top: 200px;
+}
 div.frame {
-  display: grid;
+  display: inline-grid;
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;
   width: 100px;
   border: 1px solid green;
-
-  margin-top: 200px;
 }
-div.frame .piece {
+div.final {
+  border: 1px solid green;
   display: inline-block;
-  width: 10px;
+  width: 100px;
 }
