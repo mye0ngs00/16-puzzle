@@ -8,12 +8,23 @@ div.wrapper {
 div.frame {
   display: inline-grid;
   justify-content: center;
+  width: fit-content;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid green;
 }
-div.final {
+div.frame > div.piece {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 1px;
+}
+div.frame > div.piece > canvas {
+  width: 100px;
+  height: 100px;
+}
+
+div#result_container {
   border: 1px solid green;
   display: inline-block;
   width: 100px;
