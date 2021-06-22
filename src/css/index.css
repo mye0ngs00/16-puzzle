@@ -2,7 +2,7 @@ body { margin: 0px; }
 div.wrapper {
   display: block;
   margin: 0 auto;
-  width: 500px;
+  width: 700px;
   margin-top: 200px;
 }
 div.frame {
@@ -16,16 +16,21 @@ div.frame {
 div.frame > div.piece {
   width: 100px;
   height: 100px;
-  background-color: green;
+  border: 1px solid green;
   margin: 1px;
 }
 div.frame > div.piece > canvas {
   width: 100px;
   height: 100px;
 }
-
+div.result_wrapper {
+  display: inline-block;
+  position: absolute;
+  margin-left: 13px;
+  width: 200px;
+}
 div#result_container {
   border: 1px solid green;
-  display: inline-block;
-  width: 100px;
+  width: 200px;
+  height: 200px;
 }
