@@ -9,3 +9,4 @@ feature/1: html 구조 예시 구현
 feature/2: canvas 크기 및 정답 이미지 설정
 docs/2: branch 설명 추가
 feature/3: 결과창 기능 구현
+feature/4: 드래그 기본 기능 구현 및 모델 설계
