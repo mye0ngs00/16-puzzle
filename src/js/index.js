@@ -35,14 +35,36 @@ let move = false
 let selected = 0
 let beforeCursorX = 0
 let beforeCursorY = 0
+
 document.body.addEventListener('mousedown', () => {
   move = true
 })
+document.body.addEventListener('mousemove', () => {
+  if(move && selected) {
+    const selectedPiece = document.getElementById(`piece${selected}`)
+    // TODO: translateX, Y가 block의 width, height를 넘길 경우 maximum으로 fix
+    selectedPiece.style.transform = `translate(${event.pageX - beforeCursorX}px, ${event.pageY - beforeCursorY}px)`
+    // TODO: 만약 일정 translateX가 넘어가면 translateX horizental canvas swap and fix
+  
+    // TODO: 만약 일정 translateY가 넘어가면 translateY vertical canvas swap and fix  
+  }
+})
 document.body.addEventListener('mouseup', () => {
   move = false
+  if (selected) {
+    const aroundBox = getNearestBox()
+    const temp = aroundBox
+    selectedBox.appendChild(temp)
+    const x = selectedBox.removeChild()
+    aroundBox.appendChild(x)
+    aroundBox.removeChild(y)
+  }
   selected = 0
 })
 const indexes = Array.apply(0, new Array(17)).map((_, idx) => idx + 1)
+const getNearestBox = () => {
+  
+}
 indexes.map((index) => {
   const piece = document.getElementById(`piece${index}`)
   // TODO: canvas 16등분으로 잘라서 각 piece 안에 삽입
@@ -53,13 +75,34 @@ indexes.map((index) => {
     beforeCursorY = event.pageY
   })
   piece.addEventListener('mousemove', (event) => {
-    if(move && selected) {
-      const selectedPiece = document.getElementById(`piece${selected}`)
-      // TODO: translateX, Y가 block의 width, height를 넘길 경우 maximum으로 fix
-      selectedPiece.style.transform = `translate(${event.pageX - beforeCursorX}px, ${event.pageY - beforeCursorY}px)`
-      // TODO: 만약 일정 translateX가 넘어가면 translateX horizental canvas swap and fix
-      // TODO: 만약 일정 translateY가 넘어가면 translateY vertical canvas swap and fix
-    }
+    
   })
 })
 document.getElementById('')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
